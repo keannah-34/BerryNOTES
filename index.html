@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berry Notes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  
+    .container {
+      width: 120%;
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgb(246, 165, 175), rgb(245, 125, 125),rgb(252, 60, 150));
+      color: rgb(214, 80, 102);
+      padding-top: 4%;
+      padding-left: 33%;
+    }
+
+    .container h1 {
+      display: flex;
+      align-items: center;
+      font-size: 50px;
+      font-weight: 600;
+      color: maroon;
+    }
+
+    .container h1 img {
+      width: 150px;
+   
+    }
+     .container button img{
+      width: 25px;
+      margin-right: 20px;
+      
+    }
+    .container button {
+    display: flex;
+    align-items: center;
+    background: #ffc0cb;
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+    }
+    .input-box{
+    position: relative;
+    width: 200%;
+    max-width: 600px;
+    min-width: 200px;
+    background: pink;
+    color: maroon;
+    padding: 28px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 20px;
+    }
+    .input-box img {
+      width: 100px;
+      position: absolute;
+      bottom: 20px;
+      right: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    
+</a>
+    <div class="container">
+    <h1><img src="straw.png" alt="Berry Logo">BERRY NOTES</h1>
+      <a class="home-button" href="file:///C:/Users/admin/OneDrive/Desktop/TO%20DO%20LIST/introduction%20website/index.html"><button style="
+     background-color: pink;
+     color: maroon;
+     padding: 5px 25px;
+     align-items: center;
+     border-radius: 10px;
+     border: none;
+     cursor: pointer;
+     transition:  transform 0.3s ease, background-color 0.3 ease; 
+     font-size: 1em;">
+   
+<div="btn"><img src="houses.png" alt="Edit Icon";>HOME BUTTON</button>
+      </a>
+      <button class="btn"><img src="EDIT.png" alt="Edit Icon">Notes</button>
+    <div class="notes-container">
+</div>
+  </div>
+
+  <script>
+    const notesContainer = document.querySelector(".notes-container");
+    const createBtn = document.querySelector(".btn");
+
+    function showNotes() {
+      notesContainer.innerHTML = localStorage.getItem("notes") || "";
+    }
+    showNotes();
+
+    function updateStorage() {
+      localStorage.setItem("notes", notesContainer.innerHTML);
+    }
+
+    createBtn.addEventListener("click", () => {
+      let inputBox = document.createElement("p");
+      let img = document.createElement("img");
+      inputBox.className = "input-box";
+      inputBox.setAttribute("contenteditable", "true");
+      img.src = "delete.png";
+      inputBox.appendChild(img);
+      notesContainer.appendChild(inputBox);
+      updateStorage();
+    });
+
+    notesContainer.addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        e.target.parentElement.remove();
+        updateStorage();
+      }
+    });
+
+    notesContainer.addEventListener("input", () => {
+      updateStorage();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        document.execCommand("insertLineBreak");
+        event.preventDefault();
+      }
+    });
+     
+  </script>
+</body>
+</html>

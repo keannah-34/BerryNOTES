@@ -1,0 +1,22 @@
+
+
+body{
+
+background-color: pink;
+margin: 40px; 
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+line-height: 1.6; font-size: 1.3em;
+}
+.header{
+color: #c2185b;
+font-family: 'Poppins', sans-serif;
+font-weight: 900; font-size: 3em; 
+text-align: center;
+margin-bottom: 40px;
+}
+.header img{
+     width:"500"; 
+     height:"300";
+}
+
+
