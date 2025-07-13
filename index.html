@@ -2,141 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berry Notes</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-  
-    .container {
-      width: 120%;
-      min-height: 100vh;
-      background: linear-gradient(135deg, rgb(246, 165, 175), rgb(245, 125, 125),rgb(252, 60, 150));
-      color: rgb(214, 80, 102);
-      padding-top: 4%;
-      padding-left: 33%;
-    }
+  <meta name="viewport" content=width=device-width, initial-scale=1.0">
+  <title>Introduction</title>
+  <link rel="stylesheet" href="file:///C:/Users/admin/OneDrive/Desktop/TO%20DO%20LIST/Berry%20Notes/index.html"/
 
-    .container h1 {
-      display: flex;
-      align-items: center;
-      font-size: 50px;
-      font-weight: 600;
-      color: maroon;
-    }
+ <body style="margin: 0; padding: 0; background: linear-gradient(to bottom right, #ffe4ec, #ffd6e8); font-family: 'Poppins', sans-serif; color: #702347; line-height: 1.7;">
 
-    .container h1 img {
-      width: 150px;
-   
-    }
-     .container button img{
-      width: 25px;
-      margin-right: 20px;
-      
-    }
-    .container button {
-    display: flex;
-    align-items: center;
-    background: #ffc0cb;
-    color: #fff;
-    font-size: 16px;
-    outline: 0;
-    border: 0;
-    border-radius: 40px;
-    padding: 15px 25px;
-    margin: 30px 0 20px;
-    cursor: pointer;
-    }
-    .input-box{
-    position: relative;
-    width: 200%;
-    max-width: 600px;
-    min-width: 200px;
-    background: pink;
-    color: maroon;
-    padding: 28px;
-    margin: 20px 0;
-    outline: none;
-    border-radius: 20px;
-    }
-    .input-box img {
-      width: 100px;
-      position: absolute;
-      bottom: 20px;
-      right: 14px;
-      cursor: pointer;
-    }
-  </style>
+
+
 </head>
-<body>
+<body style="color:maroon; margin: 40px; font-family: 'Georgia',serif; color: maroon; line-height: 1.6; font-size: 1.3em;background-color: lightpink; align-items: center; margin-bottom: 50px;">
+
+<div style="display: flex; justify-content: center; align-items: center; height: 500; width: 700; border-radius: 20px; ">
+
+      <img src="Red Organic Berries Fruit Logo.png" alt='Centered Image' width="1000"; height="500";>
+       </div>
     
-</a>
-    <div class="container">
-    <h1><img src="straw.png" alt="Berry Logo">BERRY NOTES</h1>
-      <a class="home-button" href="file:///C:/Users/admin/OneDrive/Desktop/TO%20DO%20LIST/introduction%20website/index.html"><button style="
-     background-color: pink;
-     color: maroon;
-     padding: 5px 25px;
-     align-items: center;
-     border-radius: 10px;
-     border: none;
-     cursor: pointer;
-     transition:  transform 0.3s ease, background-color 0.3 ease; 
-     font-size: 1em;">
-   
-<div="btn"><img src="houses.png" alt="Edit Icon";>HOME BUTTON</button>
-      </a>
-      <button class="btn"><img src="EDIT.png" alt="Edit Icon">Notes</button>
-    <div class="notes-container">
-</div>
-  </div>
 
-  <script>
-    const notesContainer = document.querySelector(".notes-container");
-    const createBtn = document.querySelector(".btn");
 
-    function showNotes() {
-      notesContainer.innerHTML = localStorage.getItem("notes") || "";
-    }
-    showNotes();
+<h1 style="color: lightmaroon; font-family: 'Poppins',sans-serif; font-weight: 900; font-size: 3em; text-align: center; margin-bottom: 50px;">
+Welcome to Berry Notes</h1>
 
-    function updateStorage() {
-      localStorage.setItem("notes", notesContainer.innerHTML);
-    }
+    <p>Berry Notes is a website that functions as a digital note-taking 
+        platform. Users can create, organized, and save their notes online.
+         Think of it as a virtual notebook where you can jot down ideas, 
+         write memos, store research or create any type of personal of 
+         professional notes. The platform likely offers features for 
+         organizing notes, perhaps through tagging,folders, or other methods. 
+         It provides a convenient and accessible way to keep track of 
+         information online, eliminating the need for physical 
+         notebooks or scattered digital files.
+    </p>
 
-    createBtn.addEventListener("click", () => {
-      let inputBox = document.createElement("p");
-      let img = document.createElement("img");
-      inputBox.className = "input-box";
-      inputBox.setAttribute("contenteditable", "true");
-      img.src = "delete.png";
-      inputBox.appendChild(img);
-      notesContainer.appendChild(inputBox);
-      updateStorage();
-    });
-
-    notesContainer.addEventListener("click", function (e) {
-      if (e.target.tagName === "IMG") {
-        e.target.parentElement.remove();
-        updateStorage();
-      }
-    });
-
-    notesContainer.addEventListener("input", () => {
-      updateStorage();
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Enter") {
-        document.execCommand("insertLineBreak");
-        event.preventDefault();
-      }
-    });
-     
-  </script>
+<a href="file:///C:/Users/admin/OneDrive/Desktop/TO%20DO%20LIST/Berry%20Notes/index.html">
+  <div style="display: flex; justify-content: center; align-items: center; height: 200px;">
+  <button style="background-color: maroon; color: #fff; padding: 20px 40px; border-radius: 10px; border: none; cursor: pointer; transition:  transform 0.3s ease, background-color 0.3 ease; font-size: 1em;">Visit   BerryNotes</button>
+  </a>
+ </div>
+</p>
 </body>
-</html>
+    </div>
+
