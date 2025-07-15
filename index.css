@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe4ec, #ffd6e8);
+  font-family: 'Georgia', serif;
+  color: maroon;
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.intro-image img {
+  width: 1000px;
+  height: 700px;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  align-items: center;
+}
+
+.intro-heading {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.intro-description {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.intro-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.visit-btn {
+  background-color: maroon;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.visit-btn:hover {
+  background-color: #8b1e3f;
+  transform: scale(1.05);
+}
